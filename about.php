@@ -1,8 +1,26 @@
+<?php
+
+$lists = listarTodosRegistros('about_section','image, title, subtitle, video, description_about', 'A');
+
+      if ($lists == 'Vazio') {
+        return "Tabela não existe";
+      }
+
+      foreach ($lists as $list) {
+          $image = $list->image;
+          $title = $list->title;
+          $subtitle = $list->subtitle;
+          $video = $list->video;
+          $description_about = $list->description_about;
+      }
+
+?>
+
 <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>About Us</h2>
+          <h2><?php echo $title ?></h2>
           <p>Learn More <span>About Us</span></p>
         </div>
 
@@ -16,8 +34,7 @@
           <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                <?php echo $description_about ?>
               </p>
               <ul>
                 <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -31,7 +48,7 @@
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                <a href="<?php echo $video ?>" class="glightbox play-btn"></a>
               </div>
             </div>
           </div>
