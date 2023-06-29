@@ -45,6 +45,13 @@ PRIMARY KEY(id_menu_section)
 CREATE TABLE `yummy`.`testimonials_section`(
 id_testimonial_section INTEGER AUTO_INCREMENT NOT NULL,
 image VARCHAR(150),
+title VARCHAR(150), 
+subtitle1 VARCHAR(150), 
+subtitle2 VARCHAR(150), 
+testimonial VARCHAR(150), 
+name VARCHAR(150), 
+profession VARCHAR(150),
+active VARCHAR(1),
 PRIMARY KEY(id_testimonial_section)
 );
 
