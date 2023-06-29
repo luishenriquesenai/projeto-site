@@ -4,6 +4,7 @@ image VARCHAR(150),
 title VARCHAR(30),
 subtitle VARCHAR(80),
 video VARCHAR(150),
+ativo VARCHAR(1),
 PRIMARY KEY(id_banner)
 );
 
@@ -13,6 +14,7 @@ image VARCHAR(150),
 title VARCHAR(30),
 subtitle VARCHAR(80),
 video VARCHAR(150),
+ativo VARCHAR(1),
 description_about VARCHAR(250),
 PRIMARY KEY(id_about)
 );
@@ -22,6 +24,7 @@ id_why_us_section INTEGER UNSIGNED AUTO_INCREMENT NOT NULL,
 icons VARCHAR(150),
 title VARCHAR(30),
 subtitle VARCHAR(100),
+ativo VARCHAR(1),
 PRIMARY KEY(id_why_us_section)
 );
 
@@ -30,6 +33,7 @@ id_stats_counter_section INTEGER AUTO_INCREMENT NOT NULL,
 image VARCHAR(150),
 type_stats VARCHAR(20),
 stats NUMERIC,
+ativo VARCHAR(1),
 PRIMARY KEY(id_stats_counter_section)
 );
 
@@ -39,6 +43,7 @@ title VARCHAR(25),
 dish VARCHAR(15),
 ingredients VARCHAR(250),
 price NUMERIC(6),
+ativo VARCHAR(1),
 PRIMARY KEY(id_menu_section)
 );
 
@@ -51,7 +56,7 @@ subtitle2 VARCHAR(150),
 testimonial VARCHAR(150), 
 name VARCHAR(150), 
 profession VARCHAR(150),
-active VARCHAR(1),
+ativo VARCHAR(1),
 PRIMARY KEY(id_testimonial_section)
 );
 
@@ -61,6 +66,7 @@ image VARCHAR(150),
 title VARCHAR(50),
 descriptions_events VARCHAR(200),
 price NUMERIC(6),
+ativo VARCHAR(1),
 PRIMARY KEY(id_events_sections)
 );
 
@@ -70,6 +76,7 @@ title VARCHAR(20),
 image VARCHAR(150),
 name_chef VARCHAR(60),
 comments VARCHAR(250),
+ativo VARCHAR(1),
 PRIMARY KEY(id_chefs_section)
 );
 
@@ -83,6 +90,7 @@ criacao DATE,
 horario TIME,
 of_people VARCHAR(50),
 message VARCHAR(150),
+ativo VARCHAR(1),
 PRIMARY KEY(id_book_a_table_section)
 );
 
@@ -90,6 +98,7 @@ CREATE TABLE `yummy`.`gallery_section`(
 id_gallery_section INTEGER AUTO_INCREMENT NOT NULL,
 image VARCHAR(150),
 title VARCHAR(100),
+ativo VARCHAR(1),
 PRIMARY KEY(id_gallery_section)
 );
 
@@ -105,5 +114,6 @@ our_address VARCHAR(250),
 email VARCHAR(50),
 call_us VARCHAR(50),
 opening_hours VARCHAR(50),
+ativo VARCHAR(1),
 PRIMARY KEY(id_contact_section)
 );
