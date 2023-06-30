@@ -1,89 +1,52 @@
-<?php
-
-$lists = listarTodosRegistros('id_chefs_section','title, image, name_chef, comments', 'A');
-
-      if ($lists == 'Vazio') {
-        return "Tabela não existe";
-      }
-
-      foreach ($lists as $list) {
-          $image = $list->image;
-          $title = $list->title;
-          $name_chef = $list->name_chef;
-          $comments = $list->comments;
-      }
-
-?>
-
-
 <section id="chefs" class="chefs section-bg">
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <h2>Chefs</h2>
-          <p>Our <span>Proffesional</span> Chefs</p>
-        </div>
+    <div class="section-header">
+      <h2>Chefes</h2>
+      <p>Nossos <span>Cozinheiros</span> Profissionais</p>
+    </div>
 
-        <div class="row gy-4">
+    <?php
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="chef-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div><!-- End Chefs Member -->
+    $lists = listarTodosRegistros('chefs_section', 'title, image, name_chef, comments', 'A');
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="chef-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+    if ($lists == 'Vazio') {
+      return "Tabela não existe";
+    }
+    ?>
+
+
+    <div class="row gy-4">
+
+      <?php foreach ($lists as $list) {
+        $imageChefs = $list->image;
+        $titleChefs = $list->title;
+        $nameChef = $list->name_chef;
+        $commentsChefs = $list->comments;
+
+      ?>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+
+
+          <div class="chef-member">
+            <div class="member-img">
+              <img src="<?php echo $imageChefs ?>" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
-          </div><!-- End Chefs Member -->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="chef-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
-              </div>
+            <div class="member-info">
+              <h4><?php echo $nameChef ?></h4>
+              <span><?php echo $titleChefs ?></span>
+              <p><?php echo $commentsChefs ?></p>
             </div>
-          </div><!-- End Chefs Member -->
-
-        </div>
-
-      </div>
-    </section>
+          </div>
+        </div><!-- End Chefs Member -->
+        <?php } ?>
+    </div>
+  </div>
+</section>
