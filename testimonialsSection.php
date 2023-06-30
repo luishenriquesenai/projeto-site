@@ -1,8 +1,8 @@
 <section id="testimonials" class="testimonials section-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
-      <h2>Teste</h2>
-      <p>teste <span>teste</span></p>
+      <h2>Depoimentos</h2>
+      <p>Nossos <span>Clientes</span></p>
     </div>
     <?php
 
