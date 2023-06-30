@@ -12,6 +12,7 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
           $subtitle = $list->subtitle;
           $video = $list->video;
           $description_about = $list->description_about;
+          $item1 = $list ->item1;
       }
 
 ?>
@@ -25,7 +26,7 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
         </div>
 
         <div class="row gy-4">
-          <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg) ;" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url(<?php echo $image ?>) ;" data-aos="fade-up" data-aos-delay="150">
             <div class="call-us position-absolute">
               <h4>Contate-nos</h4>
               <p>+55 (33)9 8461-3328</p>
@@ -46,7 +47,7 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
               </p>
 
               <div class="position-relative mt-4">
-                <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
+                <img src="<?php echo $image ?>" class="img-fluid" alt="">
                 <a href="<?php echo $video ?>" class="glightbox play-btn"></a>
               </div>
             </div>

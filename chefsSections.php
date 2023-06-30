@@ -1,3 +1,21 @@
+<?php
+
+$lists = listarTodosRegistros('id_chefs_section','title, image, name_chef, comments', 'A');
+
+      if ($lists == 'Vazio') {
+        return "Tabela não existe";
+      }
+
+      foreach ($lists as $list) {
+          $image = $list->image;
+          $title = $list->title;
+          $name_chef = $list->name_chef;
+          $comments = $list->comments;
+      }
+
+?>
+
+
 <section id="chefs" class="chefs section-bg">
       <div class="container" data-aos="fade-up">
 
