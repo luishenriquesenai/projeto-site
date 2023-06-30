@@ -1,6 +1,6 @@
 <?php
 
-$lists = listarTodosRegistros('about_section','image, title, subtitle, video, description_about', 'A');
+$lists = listarTodosRegistros('about_section','image, title, subtitle, video, description_about, item1, item2, item3', 'A');
 
       if ($lists == 'Vazio') {
         return "Tabela não existe";
@@ -13,6 +13,8 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
           $video = $list->video;
           $description_about = $list->description_about;
           $item1 = $list ->item1;
+          $item2 = $list ->item2;
+          $item3 = $list ->item3;
       }
 
 ?>
@@ -38,9 +40,9 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
                 <?php echo $description_about ?>
               </p>
               <ul>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bi bi-check2-all"></i> <?php echo $item1 ?>.</li>
+                <li><i class="bi bi-check2-all"></i><?php echo $item2 ?></li>
+                <li><i class="bi bi-check2-all"></i> <?php echo $item3 ?></li>
               </ul>
               <p>
                 Pizza boa zé, come aí.
