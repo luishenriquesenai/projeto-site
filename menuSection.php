@@ -39,7 +39,7 @@
 
         <div class="tab-header text-center">
           <p>Menu</p>
-          <h3>Starters</h3>
+          <h3>Entradas</h3>
         </div>
 
         <?php

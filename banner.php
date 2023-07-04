@@ -22,8 +22,8 @@ $lists = listarTodosRegistros('banner_section','image, title, subtitle, video', 
         <h2 data-aos="fade-up"><h1><?php echo $title ?><h1>Delicious Food</h2>
         <p data-aos="fade-up" data-aos-delay="100"><?php echo $subtitle ?></p>
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-          <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-          <a href="<?php echo $video?>" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          <a href="#book-a-table" class="btn-book-a-table">Contate-nos</a>
+          <a href="<?php echo $video?>" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Assista o video</span></a>
         </div>
       </div>
       <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
