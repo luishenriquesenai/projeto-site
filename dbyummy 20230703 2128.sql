@@ -279,30 +279,6 @@ INSERT INTO `testimonials_section` (`id_testimonial_section`,`image`,`title`,`su
 
 
 --
--- Definition of table `why`
---
-
-DROP TABLE IF EXISTS `why`;
-CREATE TABLE `why` (
-  `id_why` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `icons` varchar(150) DEFAULT NULL,
-  `title` varchar(30) DEFAULT NULL,
-  `subtitle` varchar(100) DEFAULT NULL,
-  `ativo` varchar(1) NOT NULL,
-  PRIMARY KEY (`id_why`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `why`
---
-
-/*!40000 ALTER TABLE `why` DISABLE KEYS */;
-INSERT INTO `why` (`id_why`,`icons`,`title`,`subtitle`,`ativo`) VALUES 
- (1,NULL,'CATAPIMBAS','NÃO','A');
-/*!40000 ALTER TABLE `why` ENABLE KEYS */;
-
-
---
 -- Definition of table `why_us_section`
 --
 

@@ -24,7 +24,7 @@ $lists = listarTodosRegistros('about_section','image, title, subtitle, video, de
 
         <div class="section-header">
           <h2><?php echo $title ?></h2>
-          <p>Learn More <span>About Us</span></p>
+          <p>Conheça mais <span>Sobre nós</span></p>
         </div>
 
         <div class="row gy-4">

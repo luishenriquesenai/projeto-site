@@ -1,6 +1,6 @@
 <?php
 
-$listar = listarTodosRegistros('why_us_section', 'icons, title, subtitle', 'A');
+$listar = listarTodosRegistros('why_us_section', 'title, subtitle', 'A');
 
 if ($listar == 'Vazio') {
   echo 'Tabela não existe';
@@ -15,7 +15,6 @@ if ($listar == 'Vazio') {
         <div class="why-box">
           <?php
           foreach ($listar as $itemLinha) {
-            $icons = $itemLinha->icons;
             $titleWhy =  $itemLinha->title;
             $subtitleWhy = $itemLinha->subtitle;
 
@@ -38,7 +37,6 @@ if ($listar == 'Vazio') {
           $lista2 = array_slice($listar, 1);
 
           foreach ($lista2 as $itemLinha2) {
-            $icons2 = $itemLinha2->icons;
             $titleWhy2 =  $itemLinha2->title;
             $subtitleWhy2 = $itemLinha2->subtitle;
           ?>
@@ -52,7 +50,6 @@ if ($listar == 'Vazio') {
           <?php } ?>
         </div>
       </div>
-
     </div>
   </div>
 </section>
