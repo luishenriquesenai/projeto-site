@@ -2,8 +2,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>gallery</h2>
-          <p>Check <span>Our Gallery</span></p>
+          <h2>galeria</h2>
+          <p>Confira <span>Sua Galeria</span></p>
         </div>
 
         <div class="gallery-slider swiper">
